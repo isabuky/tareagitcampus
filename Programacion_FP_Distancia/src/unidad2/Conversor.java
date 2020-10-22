@@ -25,7 +25,7 @@ public class Conversor {
 		
 		DecimalFormat DosDecimales = new DecimalFormat("#.##"); //Instrucción para redondear decimales
 					
-		System.out.println(DosDecimales.format (dolares) + " Dolares.");
+		System.out.println(RealN + " € son " + DosDecimales.format (dolares) + " $.");
 		
 		
 	}
