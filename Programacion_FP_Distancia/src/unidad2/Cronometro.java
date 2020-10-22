@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.text.DecimalFormat;
+import java.util.concurrent.TimeUnit;
 
 public class Cronometro {
 
@@ -13,16 +14,17 @@ public class Cronometro {
 		
 		System.out.print("Dime tu nombre: ");
 		
-		long inicio = System.currentTimeMillis();
+		long inicios = System.currentTimeMillis();
 		
 		String nombre = name.readLine();
 		
-        long fin = System.currentTimeMillis();
-         
-        double  tiempo = (fin - inicio)/1000;
+        long fins = System.currentTimeMillis();
         
-                        
-        System.out.printf (tiempo + " segundos");	
+        double tiempo = (fins - inicios);	
+        
+        DecimalFormat fm = new DecimalFormat("#,000");
+          
+        System.out.println ("Hola " + nombre + " has tardado " + fm.format (tiempo) + " segundos en decirme tu nombre");	
 	}
 
 }
